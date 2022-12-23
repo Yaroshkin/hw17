@@ -13,10 +13,10 @@ class Person:
 class Wallet:    
     @property 
     def wallet(self):
-        return self.money
+        return self.__wallet
 
     @wallet.setter
-    def wallet(self,value,money):
+    def wallet(self,value):
        self.__wallet = value
 
 
@@ -33,8 +33,8 @@ class Pay:
             print("Не хватает денег")
 
 
-p1 = Pay(100)
-p1.wallet = 320
+p1 = Pay(1001)
+p1.wallet = 2012
 print(p1.pay())
 
 
