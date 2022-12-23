@@ -5,16 +5,44 @@
 
 
 class Person:
-    def __init__(self,money):
-        self.money = money
+    def __init__(self,wallet=''):
+        self.__wallet = wallet
 
+    
+
+class Wallet:    
     @property 
-    def Wallet(self):
-        if  self.money < self.money_count
+    def wallet(self):
+        return self.money
+
+    @wallet.setter
+    def wallet(self,value,money):
+       self.__wallet = value
+
+
 
 class Pay:
-    def __init__(self,money_count) -> None:
+    wallet = Person()
+    def __init__(self,money_count):
         self.money_count = money_count
 
     def pay(self):
-        pass
+        if self.wallet >= self.money_count:
+            return self.wallet-self.money_count
+        else:
+            print("Не хватает денег")
+
+
+p1 = Pay(100)
+p1.wallet = 320
+print(p1.pay())
+
+
+
+
+# p1 = Person(1010)
+# p2 = Wallet(1000)
+# p3 = Pay(120)
+# print(p2.wallet)
+# p1.wallet = 100
+# print(p1.wallet)
